@@ -7,30 +7,19 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"GitHub.copilot-chat"
+				"GitHub.copilot-chat",
+				"vscjava.vscode-java-pack",
+				"vmware.vscode-boot-dev-pack",
+				"redhat.fabric8-analytics"
 			]
 		}
 	},
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
+			"version": 17,
 			"installMaven": true
-		},
-		"customizations": {
-			"vscode": {
-				"extensions": [
-					"vscjava.vscode-java-pack"
-				]
-			}
-		},
-		"containerEnv": {
-			"SDKMAN_DIR": "/usr/local/sdkman",
-			"JAVA_HOME": "/usr/local/sdkman/candidates/java/current",
-			"PATH": "/usr/local/sdkman/bin:/usr/local/sdkman/candidates/java/current/bin:/usr/local/sdkman/candidates/gradle/current/bin:/usr/local/sdkman/candidates/maven/current/bin:/usr/local/sdkman/candidates/ant/current/bin:${PATH}"
-		},
-		"installsAfter": [
-			"ghcr.io/devcontainers/features/common-utils"
-		]
+		}
 	}
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
